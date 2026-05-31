@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Charlotte roof repair blog. Expert guides on hail damage, leaks, repairs, and insurance claims.">
+    <meta name="keywords" content="roof repair blog, Charlotte roofing guides, hail damage, roof leaks">
+    <meta name="author" content="Charlotte Roof Repair">
+    <title>Roof Repair Blog - Charlotte Guides & Expert Articles</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; line-height: 1.8; color: #1f2937; background: #ffffff; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 0 16px; }
+
+        /* HEADER */
+        header { background: linear-gradient(135deg, #1f2937 0%, #374151 100%); color: white; padding: 16px 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .header-content { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-size: 20px; font-weight: bold; text-decoration: none; color: white; }
+        nav { display: flex; gap: 24px; }
+        nav a { color: white; text-decoration: none; font-size: 14px; font-weight: 500; }
+        nav a:hover { opacity: 0.8; }
+        .cta-button { background: #ef4444; color: white; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: 600; font-size: 14px; }
+        .mobile-menu { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; }
+
+        /* PAGE */
+        .page-header { background: linear-gradient(135deg, #1f2937 0%, #374151 100%); color: white; padding: 60px 0; text-align: center; }
+        .page-header h1 { font-size: 48px; margin-bottom: 16px; }
+        .page-header p { font-size: 18px; opacity: 0.9; }
+
+        /* BLOG LIST */
+        .blog-list { padding: 60px 0; }
+        .blog-list-item { background: #f9fafb; padding: 32px; border-radius: 8px; margin-bottom: 24px; border-left: 4px solid #ef4444; transition: transform 0.3s; cursor: pointer; text-decoration: none; color: inherit; display: block; }
+        .blog-list-item:hover { transform: translateX(8px); }
+        .blog-list-item h2 { font-size: 24px; margin-bottom: 12px; color: #1f2937; }
+        .blog-meta { font-size: 13px; color: #6b7280; margin-bottom: 12px; }
+        .blog-list-item p { font-size: 15px; color: #4b5563; line-height: 1.6; }
+        .read-link { color: #ef4444; font-weight: 700; margin-top: 16px; display: inline-block; }
+
+        /* ARTICLE VIEW */
+        .article { padding: 60px 0; display: none; }
+        .article.active { display: block; }
+        .article-header { margin-bottom: 48px; }
+        .article-header h1 { font-size: 42px; margin-bottom: 24px; color: #1f2937; }
+        .article-meta { color: #6b7280; font-size: 14px; margin-bottom: 24px; }
+        article { padding: 0; }
+        article h2 { font-size: 28px; margin-top: 48px; margin-bottom: 20px; color: #1f2937; }
+        article h3 { font-size: 22px; margin-top: 32px; margin-bottom: 16px; color: #1f2937; }
+        article p { margin-bottom: 16px; line-height: 1.8; }
+        article ul { margin-left: 24px; margin-bottom: 16px; }
+        article li { margin-bottom: 12px; }
+        article a { color: #ef4444; text-decoration: none; }
+        article a:hover { text-decoration: underline; }
+
+        /* SIDEBAR */
+        .sidebar { margin-top: 60px; padding-top: 60px; border-top: 1px solid #e5e7eb; }
+        .sidebar h3 { font-size: 20px; margin-bottom: 24px; color: #1f2937; }
+        .related-posts { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .related-card { background: #f9fafb; padding: 16px; border-radius: 8px; text-decoration: none; cursor: pointer; }
+        .related-card h4 { font-size: 16px; margin-bottom: 8px; color: #1f2937; }
+        .related-card p { font-size: 13px; color: #6b7280; margin: 0; }
+
+        /* CTA SECTION */
+        .cta-section { background: #f3f4f6; border-left: 4px solid #ef4444; padding: 24px; border-radius: 8px; margin: 48px 0; }
+        .cta-section h3 { margin-bottom: 12px; color: #1f2937; }
+        .cta-button-primary { background: #ef4444; color: white; border: none; padding: 12px 32px; border-radius: 6px; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-block; margin-top: 12px; }
+        .cta-button-primary:hover { background: #dc2626; }
+
+        /* FOOTER */
+        footer { background: #1f2937; color: white; padding: 40px 0 20px; margin-top: 60px; text-align: center; font-size: 14px; }
+        footer a { color: #ef4444; }
+
+        @media (max-width: 768px) {
+            .mobile-menu { display: block; }
+            nav { display: none; }
+            .page-header h1 { font-size: 28px; }
+            article h2 { font-size: 20px; }
+            .related-posts { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <a href="/" class="logo">🏠 Charlotte Roof Repair</a>
+                <button class="mobile-menu">☰</button>
+                <nav>
+                    <a href="/">Home</a>
+                    <a href="/blog.html">Blog</a>
+                    <a href="/#faq">FAQ</a>
+                    <a href="/#form" class="cta-button">Get Assessment</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Roof Repair Guides</h1>
+            <p>Expert articles on Charlotte roof damage, repairs, and insurance</p>
+        </div>
+    </section>
+
+    <!-- BLOG LIST VIEW -->
+    <section class="blog-list" id="blogListView">
+        <div class="container"></div>
+    </section>
+
+    <!-- ARTICLE VIEW (Hidden by default, shown when article selected) -->
+    <div id="articleView" class="container" style="padding-top: 60px; display: none;">
+        <div class="article active" id="articleContent"></div>
+        <div class="sidebar">
+            <h3>Related Articles</h3>
+            <div class="related-posts" id="relatedPosts"></div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 Charlotte Roof Repair. Free assessment service.</p>
+        <p><a href="/#form">Get Assessment</a> | <a href="/">Home</a></p>
+    </footer>
+
+    <script>
+        let allPosts = [];
+        let currentPostId = null;
+
+        async function loadBlogPosts() {
+            try {
+                const response = await fetch('/blog-data.json');
+                allPosts = await response.json();
+
+                // Check if URL has article anchor
+                const anchor = window.location.hash.substr(1);
+                if (anchor && allPosts.some(p => p.id === anchor)) {
+                    showArticle(anchor);
+                } else {
+                    showBlogList();
+                }
+            } catch (error) {
+                console.error('Error loading blog posts:', error);
+            }
+        }
+
+        function showBlogList() {
+            document.getElementById('blogListView').style.display = 'block';
+            document.getElementById('articleView').style.display = 'none';
+            const container = document.querySelector('.blog-list .container');
+            container.innerHTML = '';
+
+            allPosts.forEach(post => {
+                const item = document.createElement('a');
+                item.href = `#${post.id}`;
+                item.className = 'blog-list-item';
+                item.innerHTML = `
+                    <div style="display: flex; gap: 16px; align-items: flex-start;">
+                        <span style="font-size: 32px;">${post.emoji}</span>
+                        <div style="flex: 1;">
+                            <h2>${post.title}</h2>
+                            <div class="blog-meta">${post.readTime} read • ${new Date(post.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</div>
+                            <p>${post.excerpt}</p>
+                            <span class="read-link">Read Full Article →</span>
+                        </div>
+                    </div>
+                `;
+                item.onclick = (e) => {
+                    e.preventDefault();
+                    showArticle(post.id);
+                    window.location.hash = post.id;
+                };
+                container.appendChild(item);
+            });
+        }
+
+        function showArticle(postId) {
+            currentPostId = postId;
+            const post = allPosts.find(p => p.id === postId);
+            if (!post) {
+                showBlogList();
+                return;
+            }
+
+            document.getElementById('blogListView').style.display = 'none';
+            document.getElementById('articleView').style.display = 'block';
+
+            const articleContent = document.getElementById('articleContent');
+            articleContent.innerHTML = `
+                <div class="article-header">
+                    <div style="font-size: 48px; margin-bottom: 16px;">${post.emoji}</div>
+                    <h1>${post.title}</h1>
+                    <div class="article-meta">${post.readTime} read • ${new Date(post.date).toLocaleDateString('en-US', {month: 'short', day: 'numeric', year: 'numeric'})}</div>
+                </div>
+                <article>${post.content}</article>
+                <div class="cta-section">
+                    <h3>Need a Professional Assessment?</h3>
+                    <p>Get connected with licensed Charlotte contractors. Free inspection, no obligation.</p>
+                    <a href="/#form" class="cta-button-primary" onclick="this.href='/#form'">Schedule Free Assessment</a>
+                </div>
+            `;
+
+            // Load related posts
+            const relatedPosts = allPosts
+                .filter(p => p.id !== postId)
+                .slice(0, 3);
+
+            const relatedContainer = document.getElementById('relatedPosts');
+            relatedContainer.innerHTML = '';
+            relatedPosts.forEach(p => {
+                const card = document.createElement('a');
+                card.href = `#${p.id}`;
+                card.className = 'related-card';
+                card.innerHTML = `
+                    <div style="font-size: 24px; margin-bottom: 8px;">${p.emoji}</div>
+                    <h4>${p.title}</h4>
+                    <p>${p.readTime} read</p>
+                `;
+                card.onclick = (e) => {
+                    e.preventDefault();
+                    showArticle(p.id);
+                    window.location.hash = p.id;
+                    window.scrollTo(0, 0);
+                };
+                relatedContainer.appendChild(card);
+            });
+
+            window.scrollTo(0, 0);
+        }
+
+        // Load on page load
+        document.addEventListener('DOMContentLoaded', loadBlogPosts);
+
+        // Back button in blog list
+        window.addEventListener('hashchange', () => {
+            const anchor = window.location.hash.substr(1);
+            if (anchor) {
+                showArticle(anchor);
+            } else {
+                showBlogList();
+            }
+        });
+    </script>
+</body>
+</html>
